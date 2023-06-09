@@ -1,93 +1,111 @@
-.body{
-  
+body {
+  background: linear-gradient(135deg, #1e1e1e, #000000);
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 30px;
-    margin-top: 15rem;
-  }
-  
-  .header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .drag-container {
-    display: flex;
-    justify-content: center;
-    min-height: 100px;
-    min-width: 400px;
-    width: 400px;
-    height: 200px;
-    margin-top: 30px;
-    border: black solid 1px;
-  }
-  
-  .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin: 5px;
-    background-color: #eaeaea;
-    cursor: grab;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .item img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 5px;
-  }
-  
-  .item p {
-    margin: 0;
-    font-weight: bold;
-  }
-  
-  .drop-container {
-    width: 400px;
-    height: 200px;
-    border: 2px dashed #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .item.dragging {
-    opacity: 0.5;
-    color: blue;
-  }
-  
-  .drop-container.dropping {
-    background-color: #e0e0e0;
-  }
-  
-  .success-message {
-    margin-top: 10px;
-    font-weight: bold;
-    color: green;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+  margin: 10em 10rem 1rem 10rem;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  color: gainsboro;
+}
+
+.drag-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 400px;
+  min-width: 800px;
+  min-height: 400px;
+  padding: 5px;
+  overflow: auto;
+  border: rgb(255, 255, 255) solid 1px;
+}
+
+.drop-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  height: 400px;
+  min-width: 800px;
+  min-height: 400px;
+  padding: 5px;
+  overflow: auto;
+  border: rgb(255, 255, 255) solid 1px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 120px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #9d9c9c;
+  cursor: grab;
+  border: whitesmoke solid 2px;
+  transition: transform 0.2s ease-in-out;
+  z-index: 2px;
+
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  position: relative; 
+}
+
+.item p {
+  margin: 0;
+  font-weight: bold;
+}
+
+
+.item.dragging {
+  opacity: 0.5;
+}
+
+.drop-container.dropping {
+  background-color: #242222;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  flex-basis: 50%;
+}
+
+button:hover {
+  background-color: #b6bcb7;
+  color: black;
+}
+
+.glsm {
+  background: rgba( 225, 221, 221, 0 );
+  box-shadow: 0 8px 45px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 9.5px );
+  -webkit-backdrop-filter: blur( 9.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
