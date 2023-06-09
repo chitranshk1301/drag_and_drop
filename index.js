@@ -15,6 +15,15 @@ for(const item of items) {
       dropContainer.appendChild(selected);
       selected = null;
     })
+
+    dragContainer.addEventListener("dragover", function(e){
+      e.preventDefault();
+    })
+
+    dragContainer.addEventListener("drop", function(e){
+      dragContainer.appendChild(selected);
+      selected = null;
+    })
   })
 }
 
